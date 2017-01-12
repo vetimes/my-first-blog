@@ -38,7 +38,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    'taggit',
 )
 
 
@@ -102,3 +101,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'dev.jhyi0127@gmail.com'
+EMAIL_HOST_PASSWORD = '###'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+"""
+from django.core.mail import send_mail
+send_mail('Django mail', 'This e-mail was sent with Django.', 'dev.jhyi0127@gmail.com', ['dev.jhyi0127@gmail.com'], fail_silently=False)
+"""
